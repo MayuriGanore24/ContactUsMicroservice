@@ -21,6 +21,12 @@ connectDB().then(() => {
 });
 
 const app = express();
+app.get("/", (req, res) => {
+  res.status(200).json({
+    status: "success",
+    message: "Welcome to ContactUs Microservice!",
+  });
+});
 
 // Middleware
 app.use(express.json());
